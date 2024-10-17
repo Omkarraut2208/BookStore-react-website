@@ -1,0 +1,117 @@
+#popularbook-section{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+    /* border-bottom: 1px solid rgba(121, 121, 121, 0.489); */
+}
+
+.popularbook-heading p{
+    font-size: 12px;
+}
+.popularbook-heading h1{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.filter-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+
+.filter-buttons button {
+    border: 0px;
+    background-color: white;
+    font-size: 17px !important;
+    color: rgba(62, 62, 62, 0.804);
+    text-transform: uppercase;
+    padding-bottom: 6px;
+}
+
+.filter-buttons .active {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.852);
+    color: rgb(184, 10, 10);
+}
+
+.popular-image {
+    border-radius: 5px;
+}
+
+.gallery {
+    margin-top: 30px !important;
+}
+
+.gallery-item {
+    animation: GAni forwards 400ms ease;
+    margin-top: 20px !important;
+}
+
+@keyframes GAni {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Styling for the book information */
+.popularbook-info {
+    text-align: center;           /* Center text */
+    margin-top: 12px;            /* Space between image and info */
+}
+
+/* Title style */
+.popularbook-info h4 {
+    font-size: 1.2em;             /* Adjust title size */
+    font-weight: bold;            /* Make title bold */
+    margin-bottom: 4px;           /* Space below the title */
+}
+
+/* Writer's name style */
+.popularbook-info small {
+    color: #666;                  /* Dark gray color for writer's name */
+}
+
+/* Price style */
+.popularbook-info h5 {
+    color: #ff0000;               /* Red color for price */
+    margin-top: 4px;              /* Space above price */
+}
+
+/* Hover effect */
+.gallery-item:hover {
+    transform: scale(1.05);       /* Slightly scale up on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+/* ######################## Tablet View ######################### */
+@media only screen and (min-width: 768px) {
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .popularbook-info {
+     width: 80%;
+    }
+    .gallery-item {
+        animation: GAni forwards 400ms ease;
+        margin-top: 30px !important;
+    }
+    
+}
+
+/* ######################## Desktop view ######################### */
+@media only screen and (min-width: 1024px) {
+    /* Add any additional desktop-specific styles here */
+    .popularbook-info {
+        width: 100%;
+       }
+       .gallery-item {
+        animation: GAni forwards 400ms ease;
+        margin-top: 40px !important;
+    }
+}
